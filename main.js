@@ -15,42 +15,48 @@ function runOnStart() {
 
   document.addEventListener("scroll", processScroll)
 
-  new Splide(".slider-antes-depois", {
-    width: "100%",
-    fixedHeight: "20rem",
-    gap: "1em",
-    rewind: true,
-    perPage: 1,
-    breakpoints: {
-      450: {
-        fixedHeight: "16rem",
-        perPage: 1,
+  setTimeout(() => {
+    new Splide(".slider-antes-depois", {
+      width: "100%",
+      fixedHeight: "18rem",
+      gap: "1em",
+      rewind: true,
+      perPage: 2,
+      breakpoints: {
+        450: {
+          perPage: 1,
+        },
       },
-    },
-    intersection: {
-      inView: {
-        autoplay: true,
+      intersection: {
+        inView: {
+          autoplay: true,
+        },
+        outView: {
+          autoplay: false,
+        },
       },
-      outView: {
-        autoplay: false,
-      },
-    },
-  }).mount(window.splide.Extensions)
+    }).mount(window.splide.Extensions)
 
-  new Splide(".slider-planos", {
-    width: "100%",
-    gap: "1em",
-    rewind: true,
-    perPage: 1,
-    intersection: {
-      inView: {
-        autoplay: true,
+    new Splide(".slider-planos", {
+      width: "100%",
+      gap: "1em",
+      rewind: true,
+      perPage: 2,
+      breakpoints: {
+        900: {
+          perPage: 1,
+        },
       },
-      outView: {
-        autoplay: false,
+      intersection: {
+        inView: {
+          autoplay: true,
+        },
+        outView: {
+          autoplay: false,
+        },
       },
-    },
-  }).mount(window.splide.Extensions)
+    }).mount(window.splide.Extensions)
+  }, 100)
 }
 if (document.readyState !== "loading") {
   runOnStart()
