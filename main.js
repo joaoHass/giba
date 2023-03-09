@@ -18,7 +18,7 @@ function runOnStart() {
   setTimeout(() => {
     new Splide(".slider-antes-depois", {
       width: "100%",
-      fixedHeight: "18rem",
+      fixedHeight: "20rem",
       gap: "1em",
       rewind: true,
       perPage: 2,
