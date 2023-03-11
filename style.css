@@ -735,11 +735,23 @@ p {
   padding: 4rem 0;
 }
 
+.s-planos .above-title {
+  display: block;
+  text-align: center;
+  color: var(--clr-blue);
+}
+
 .s-planos h2 {
-  font-size: 1.5rem;
+  margin-top: -0.25rem;
+  margin-bottom: 2rem;
+  font-size: 1.875rem;
   text-align: center;
   font-weight: 400;
-  margin-bottom: 3rem;
+  color: var(--clr-black);
+}
+
+.s-planos h2 span {
+  font-weight: 700;
 }
 
 .plano {
@@ -880,13 +892,15 @@ p {
 .plano .cartao {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
   padding: 1rem 0;
   text-align: left;
   font-size: 0.75rem;
 }
 
 .plano .cartao img {
-  max-width: 3rem;
+  max-width: 1.5rem;
+  margin-left: 0.25rem;
 }
 
 .plano .btn {
