@@ -36,27 +36,7 @@ function runOnStart() {
         },
       },
     }).mount(window.splide.Extensions)
-
-    new Splide(".slider-planos", {
-      width: "100%",
-      gap: "1em",
-      rewind: true,
-      perPage: 2,
-      breakpoints: {
-        900: {
-          perPage: 1,
-        },
-      },
-      intersection: {
-        inView: {
-          autoplay: true,
-        },
-        outView: {
-          autoplay: false,
-        },
-      },
-    }).mount(window.splide.Extensions)
-  }, 100)
+  }, 300)
 }
 if (document.readyState !== "loading") {
   runOnStart()
