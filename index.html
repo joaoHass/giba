@@ -792,6 +792,121 @@
         </div>
       </div>
     </section>
+
+    <!-- #form -->
+    <div class="modal modal--main-form is-hidden" id="modal">
+      <div class="modal__image-wrapper">
+        <img src="./images/Seção 1/interior-min.jpg" alt="" />
+      </div>
+
+      <form
+        method="post"
+        action="enviar.php"
+        id="regForm"
+        name="envia"
+        class="form"
+        autocomplete="off"
+      >
+        <input type="hidden" name="utm_term" value="" />
+        <input type="hidden" name="utm_content" value="" />
+        <input type="hidden" name="utm_source" value="" />
+        <input type="hidden" name="utm_medium" value="" />
+        <input type="hidden" name="utm_campaign" value="" />
+        <input type="hidden" name="url-form" value="<?php echo $escaped_url?>" />
+        <div class="wrapper">
+          <button class="btn btn--close" type="button">&times;</button>
+
+          <h6>Só precisamos de mais algumas <b>informações!</b></h6>
+          <p>
+            Para sabermos te atender da <b>melhor forma possível</b>, precisamos de
+            algumas informações.
+          </p>
+          <p id="alertForm" class="alert is-hidden">
+            Preencha todos os campos corretamente!
+          </p>
+
+          <!-- FORM__NAME -->
+          <div class="form__field-wrapper">
+            <label class="" for="name-form">Insira seu nome aqui*</label>
+            <input
+              type="text"
+              name="name-form"
+              id="nameForm"
+              placeholder="Seu nome aqui"
+              autocomplete="off"
+              required
+            />
+          </div>
+
+          <!-- FORM__CELLPHONE -->
+          <div class="form__field-wrapper">
+            <label class="" for="cellphone-form"
+              >Insira seu número de telefone*</label
+            >
+            <input
+              type="tel"
+              name="cellphone-form"
+              id="cellphoneForm"
+              placeholder="Seu número aqui"
+              title="Seu número de celular com o código de área"
+              onkeypress="mascara(this)"
+              maxlength="15"
+              autocomplete="off"
+              required
+            />
+          </div>
+
+          <!-- FORM__EMAIL -->
+          <div class="form__field-wrapper">
+            <label for="email-form">Seu melhor e-mail para contato*</label>
+            <input
+              type="email"
+              name="email-form"
+              id="emailForm"
+              placeholder="email@exemplo.com"
+              required
+            />
+          </div>
+
+          <!-- FORM__AREA -->
+          <div class="form__field-wrapper">
+            <label for="plano-form">Plano escolhido</label>
+            <div class="form__select-wrapper">
+              <select name="plano-form" id="planoForm" required>
+                <option value="pf">Ouro</option>
+                <option value="pj">Diamante</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- FORM__AREA -->
+          <div class="form__field-wrapper">
+            <label for="qtd-ambientes-form">Número de ambientes</label>
+            <div class="form__select-wrapper">
+              <select name="qtd-ambientes" id="qtAmbientesForm" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+              </select>
+            </div>
+          </div>
+
+          <button
+            class="btn btn--submit"
+            name="submit-btn"
+            formaction="enviar.php"
+            type="submit"
+          >
+            Entrar em contato
+          </button>
+        </div>
+      </form>
+    </div>
+
     <script src="./libs/splide/splide.min.js" async defer></script>
     <script
       src="./libs/splide/splide-extension-intersection.min.js"
